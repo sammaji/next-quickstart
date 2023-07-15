@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow:
+Disallow: /api
+
+Allow: /api/og/*
+Allow: /api/dynamic-og/*
+
+
+
+Sitemap: https://yourdomain.com/sitemap.xml

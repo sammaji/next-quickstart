@@ -1,0 +1,13 @@
+{
+  "tabWidth": 4,
+  "useTabs": true,
+  "bracketSameLine": false,
+  "endOfLine": "crlf",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "editorconfig": true,
+  "semi": true,
+  "trailingComma": "all",
+  "proseWrap": "always",
+  "singleQuote": false
+}
