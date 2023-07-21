@@ -5,22 +5,21 @@ import {
 	SignInButton,
 	SignOutButton,
 	SignUpButton,
+	useAuth,
+	UserButton,
 } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
-import UserAvatar from "./user-avatar";
+import { ModeToggle } from "@/components/ui/theme-toggle";
 
 export default function Navbar() {
 	return (
-		<nav className="w-full h-[56px] flex items-center justify-between">
-			<TypographyH3 className="mt-0 font-extrabold">
+		<nav className="w-full h-[56px] px-8 flex items-center justify-between">
+			<TypographyH3 className="mt-0 font-extrabold text-md">
 				{"Next Starter"}
 			</TypographyH3>
 			<div className="flex items-center justify-center gap-2">
-				<UserAvatar />
 				<SignedIn>
-					<SignOutButton>
-						<Button>Sign Out</Button>
-					</SignOutButton>
+					<UserButton />
 				</SignedIn>
 
 				<SignedOut>
@@ -31,6 +30,8 @@ export default function Navbar() {
 						<Button>Join</Button>
 					</SignUpButton>
 				</SignedOut>
+
+				<ModeToggle />
 			</div>
 		</nav>
 	);
