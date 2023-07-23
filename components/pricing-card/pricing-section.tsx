@@ -47,9 +47,9 @@ export default function PricingSection() {
 					Why Next Starter?
 				</TypographyH2>
 				<TypographyP className="text-center">
-					With incremental behavior and adaptable bundling strategies,
-					Turbopack provides a fast and flexible development
-					experience for apps of any size.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Repellat quae incidunt dicta quis ipsam nulla vero facilis
+					mollitia, aliquam illo quam assumenda.
 				</TypographyP>
 			</div>
 			{pricing_perks.map((item, index) => (

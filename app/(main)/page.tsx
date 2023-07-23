@@ -26,8 +26,8 @@ export default function Home() {
 					Launch in Seconds
 				</TypographyH1>
 				<TypographyP className="text-2xl w-2/3 text-center">
-					Create your boring SaaS product in seconds with our cutting
-					edge technology (according to us).
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Unde aut quas provident vero illum.
 				</TypographyP>
 				<div className="space-x-4">
 					<Button size="lg">Get Started</Button>
