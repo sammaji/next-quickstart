@@ -13,11 +13,12 @@ Example how to mark a checkbox:-
 - [x] I have performed a self-review of my own code.
 -->
 
-- [ ] I have performed a self-review of my own code.
-- [ ] I have commented on my code, particularly wherever it was hard to understand.
-- [ ] I have made corresponding changes to the documentation.
-- [ ] I have followed the code style of the project
-- [ ] I have tested my code, and it works without errors
+-   [ ] I have performed a self-review of my own code.
+-   [ ] I have commented on my code, particularly wherever it was hard to
+        understand.
+-   [ ] I have made corresponding changes to the documentation.
+-   [ ] I have followed the code style of the project
+-   [ ] I have tested my code, and it works without errors
 
 ## Additional Information
 
@@ -29,7 +30,7 @@ Example how to mark a checkbox:-
 
 ## Code of Conduct
 
-- [ ] I agree to follow this project's [Code of Conduct](#)
+-   [ ] I agree to follow this project's [Code of Conduct](#)
 
 **Please keep up with the [Discord Conversation](#) for more information.**
 
