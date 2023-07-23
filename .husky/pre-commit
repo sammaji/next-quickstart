@@ -3,3 +3,39 @@
 
 npm run format
 npm run prettier:fix
+
+if git diff-index --quiet HEAD --; then
+    echo "husky: No changes detected in git files."
+    exit 0
+fi
+
+diff=$(git diff --stat)
+max_lines=10
+line_count=$(git diff --stat | wc -l)
+
+echo "Files to be committed (showing first $max_lines lines only):"
+echo "$diff" | head -n $max_lines
+
+lines_left=$(($line_count - $max_lines - 1))
+if [ "$lines_left" -gt 0 ]; then
+    echo "$diff" | tail -n 1
+    echo "+ $lines_left more items"
+fi
+
+while true; do
+read -p "Do you want to add and commit these changes? (y/n): " choice
+case "$choice" in
+    y|Y )
+        git add .
+        git commit -m "chore(format): auto fomatted files"
+        echo "husky: Changes have been committed."
+        ;;
+    n|N )
+        echo "husky: No changes were committed."
+        exit 0
+        ;;
+    * )
+        echo "husky: Invalid choice. Please enter 'y' or 'n'."
+        ;;
+    esac
+done
