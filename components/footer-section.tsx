@@ -3,7 +3,7 @@ import { TypographyH3, TypographyP } from "./ui/typography";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 
-type Footer = { title: string; items: { title: string; url: string }[] }
+type Footer = { title: string; items: { title: string; url: string }[] };
 
 const footer: Footer[] = [
 	{
