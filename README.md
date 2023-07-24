@@ -1,5 +1,6 @@
 # Next 13 Starter Template
-<img width="946" alt="Screenshot 2023-07-23 141123" src="https://github.com/samyabrata-maji/next-starter/assets/116789799/816e232c-ba1d-4bb0-82bc-7b37f7d7b76c">
+<img width="946" alt="nextstarter" src="https://github.com/samyabrata-maji/next-starter/assets/116789799/331be6bd-39f5-421b-91dd-cfeabbda9f64">
+
 
 ## Features
 - [x] Next 13 App Directories
