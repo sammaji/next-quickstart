@@ -17,6 +17,7 @@ import {
 } from "@/components/pricing-card/pricing-card";
 import { PricingSection } from "@/components/pricing-card";
 import FooterSection from "@/components/footer-section";
+import FaqSection from "@/components/faq-section";
 
 export default function Home() {
 	return (
@@ -43,6 +44,7 @@ export default function Home() {
 				</div>
 			</main>
 			<PricingSection />
+			<FaqSection />
 			<Separator orientation="horizontal" />
 			<FooterSection />
 		</>
