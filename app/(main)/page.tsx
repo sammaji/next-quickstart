@@ -3,18 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { TypographyH1, TypographyP } from "@/components/ui/typography";
-import { useTransition } from "react";
 import ImgDashboard from "@/public/assets/img/intellij.png";
-import {
-	Accordion,
-	AccordionContent,
-	AccordionItem,
-	AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-	PricingOptions,
-	PricingTiers,
-} from "@/components/pricing-card/pricing-card";
 import { PricingSection } from "@/components/pricing-card";
 import FooterSection from "@/components/footer-section";
 import FaqSection from "@/components/faq-section";
