@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 1.1.0
+
+- Automated releases
+
 ## 1.0.0
 
 - Next 13 App Directories
