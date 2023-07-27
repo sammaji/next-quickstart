@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## 1.2.0
+
+-   Added stripe checkouts
+
 ## 1.1.0
 
 -   Automated releases

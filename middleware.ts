@@ -5,10 +5,11 @@ import { authMiddleware } from "@clerk/nextjs";
 // See https://clerk.com/docs/nextjs/middleware for more information about configuring your middleware
 export default authMiddleware({
 	publicRoutes: ["/", "/(github|twitter|linkedin)"],
+	ignoredRoutes: ["/(api|trpc)(.*)"],
 	clockSkewInMs: 100_000,
 	clockSkewInSeconds: 100,
 });
 
 export const config = {
-	matcher: ["/((?!.*\\..*|_next).*)", "/(dashboard)(.*)", "/(api|trpc)(.*)"],
+	matcher: ["/((?!.*\\..*|_next).*)", "/(dashboard)(.*)"],
 };

@@ -1,7 +1,5 @@
 import { Check } from "lucide-react";
-
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -11,6 +9,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { TypographyP } from "../ui/typography";
+import CheckoutButton from "./checkout-button";
 
 export enum PricingTiers {
 	FREE,
@@ -71,12 +70,12 @@ export default function PricingCard({
 						*No credit cards required
 					</TypographyP>
 				)}
-				<Button
+				<CheckoutButton
 					variant={tier === PricingTiers.FREE ? "outline" : "default"}
 					className="w-full"
 				>
 					{callToAction}
-				</Button>
+				</CheckoutButton>
 			</CardFooter>
 		</Card>
 	);
