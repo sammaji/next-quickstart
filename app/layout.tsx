@@ -2,9 +2,10 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"] });
 
 const title = "Created By Samyabrata Maji";
 const description = "Next 13 Starter Template";
@@ -37,7 +38,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={manrope.className}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="light"

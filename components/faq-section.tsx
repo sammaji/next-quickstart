@@ -15,7 +15,7 @@ type Faqs = {
 
 const faqs: Faqs[] = [
 	{
-		question: "What is Next Starter?",
+		question: "Do I get a free trial?",
 		answer: "Next Starter is a powerful cloud-based platform that simplifies project management and enhances team collaboration, empowering businesses to achieve their goals efficiently.",
 	},
 	{
@@ -34,7 +34,7 @@ const faqs: Faqs[] = [
 
 export default function FaqSection() {
 	return (
-		<section className="pt-16 pb-24 px-24 grid grid-cols-2 gap-8">
+		<section className="pt-16 pb-24 px-24 max-sm:px-8 grid grid-cols-2 gap-8">
 			<div className="flex items-center justify-center max-md:hidden">
 				<img src={ImgFaq.src} className="w-full h-auto" />
 			</div>
@@ -45,7 +45,7 @@ export default function FaqSection() {
 				<Accordion type="single" collapsible className="w-full">
 					{faqs.map((faq, index) => (
 						<AccordionItem value={`item-${index}`} key={index}>
-							<AccordionTrigger>{faq.question}</AccordionTrigger>
+							<AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
 							<AccordionContent>{faq.answer}</AccordionContent>
 						</AccordionItem>
 					))}

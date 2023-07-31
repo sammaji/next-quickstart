@@ -11,10 +11,11 @@ export async function POST(request: Request) {
 
 	const data = await request.json();
 	const price_id = data.price_id;
+	const mode = data.mode;
 
-	if (!price_id) {
+	if (!price_id || !mode) {
 		return NextResponse.json(
-			"create-checkout: please provide a valid price id",
+			"create-checkout: please provide a valid price id or payment mode",
 			{ status: 422 },
 		);
 	}
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
 		event = await stripe.checkout.sessions.create({
 			success_url: process.env.STRIPE_SUCCESS_URL as string,
 			cancel_url: process.env.STRIPE_CANCEL_URL as string,
-			mode: "subscription",
+			mode,
 			line_items: [
 				{
 					price: price_id,
@@ -37,16 +38,11 @@ export async function POST(request: Request) {
 			{ status: 200 },
 		);
 	} catch (error: any) {
-		return NextResponse.json(
-			{
-				message: `create-checkout: ${
-					error?.message || "unexpected error"
-				}`,
-			},
-			{
-				status: error?.status || 512,
-				statusText: error || "unexpected error",
-			},
-		);
+		return NextResponse.json({
+			status: error?.status || 512,
+			statusText:
+				`create-checkout: ${error?.message || "unexpected error"}` ||
+				"unexpected error",
+		});
 	}
 }

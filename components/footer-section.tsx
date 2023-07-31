@@ -7,18 +7,18 @@ type Footer = { title: string; items: { title: string; url: string }[] };
 
 const footer: Footer[] = [
 	{
-		title: "Resources",
+		title: "Socials",
 		items: [
 			{
-				title: "Blog",
+				title: "Twitter",
 				url: "#",
 			},
 			{
-				title: "Releases",
+				title: "LinkedIn",
 				url: "#",
 			},
 			{
-				title: "Docs",
+				title: "Facebook",
 				url: "#",
 			},
 		],
@@ -80,7 +80,7 @@ export default function FooterSection() {
 	return (
 		<footer>
 			<div className="flex max-md:flex-col items-center justify-center gap-8 px-8 pt-8">
-				<div className="grid grid-cols-5 max-md:grid-cols-4 max-sm:grid-cols-2 gap-8 flex-shrink-0">
+				<div className="grid grid-cols-5 max-md:grid-cols-4 max-sm:grid-cols-2 gap-8 max-md:w-full flex-shrink-0">
 					{footer.map((footer_group_item, index) => (
 						<ul key={index}>
 							<TypographyH3 className="m-0 p-0 text-lg">

@@ -14,16 +14,17 @@ import CheckoutButton from "./checkout-button";
 export enum PricingTiers {
 	FREE,
 	HOBBY,
-	ENTERPRISE,
+	LIFETIME,
 }
 
 export type PricingOptions = {
 	tier: PricingTiers;
 	title: string;
-	price: number;
 	description: string;
 	callToAction: string;
 	perks: string[];
+	priceId: string;
+	mode?: "subscription" | "payment";
 };
 
 type CardProps = React.ComponentProps<typeof Card> & PricingOptions;
@@ -34,8 +35,8 @@ export default function PricingCard({
 	title,
 	description,
 	callToAction,
-	price,
 	perks,
+	priceId,
 	...props
 }: CardProps) {
 	return (
@@ -71,6 +72,13 @@ export default function PricingCard({
 					</TypographyP>
 				)}
 				<CheckoutButton
+					paymentMode={
+						tier === PricingTiers.LIFETIME
+							? "payment"
+							: "subscription"
+					}
+					priceId={priceId}
+					tier={tier}
 					variant={tier === PricingTiers.FREE ? "outline" : "default"}
 					className="w-full"
 				>

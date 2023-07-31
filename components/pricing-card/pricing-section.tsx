@@ -8,42 +8,51 @@ export const pricing_perks: PricingOptions[] = [
 		title: "Free",
 		description: "For new users",
 		callToAction: "Try for free",
-		price: 0,
-		perks: ["Up to 10 active projects", "1 GB storage", "Email support"],
+		perks: [
+			"10 searches / month",
+			"Scan 100 Jobs at a time",
+			"24/7 Support",
+		],
+		priceId: process.env
+			.NEXT_PUBLIC_STRIPE_PRICE_ID_SUBSCRIPTION_FREE as string,
 	},
 	{
 		tier: PricingTiers.HOBBY,
-		title: "Hobby",
+		title: "Pro",
 		description: "For freelancers and individuals",
-		price: 19,
-		callToAction: "Buy $19/month",
+		callToAction: "Buy $9 / month",
 		perks: [
-			"Up to 50 active projects",
-			"5 GB storage",
-			"Team collaboration",
-			"Priority email and chat support",
+			"1000 searches / month",
+			"Scan 5000+ Jobs at a time",
+			"Advanced Searches",
+			"Filter by client info",
+			"Priority Support",
 		],
+		priceId: process.env
+			.NEXT_PUBLIC_STRIPE_PRICE_ID_SUBSCRIPTION_HOBBY as string,
 	},
 	{
-		tier: PricingTiers.ENTERPRISE,
-		title: "Enterprise",
+		tier: PricingTiers.LIFETIME,
+		title: "Lifetime",
 		description: "For companies and enterprises",
-		price: 79,
-		callToAction: "Buy $79/month",
+		callToAction: "Buy $69",
 		perks: [
-			"Unlimited active projects",
-			"20 GB storage",
-			"Email and on-call support",
-			"Unlimited reporting and logs",
+			"Unlimited searches",
+			"Scan 5000+ Jobs at a time",
+			"Advanced Searches",
+			"Filter by client info",
+			"Priority Support",
 		],
+		priceId: process.env
+			.NEXT_PUBLIC_STRIPE_PRICE_ID_SUBSCRIPTION_LIFETIME as string,
 	},
 ];
 
 export default function PricingSection() {
 	return (
-		<section className="grid grid-rows-[auto_1fr] grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 pt-8 pb-16 px-24">
-			<div className="col-span-3 max-md:col-span-2 max-sm:col-span-1 w-2/3 flex flex-col items-center justify-center justify-self-center">
-				<TypographyH2 className="border-none font-extrabold">
+		<section className="grid grid-rows-[auto_1fr] grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 pt-8 pb-16 px-24 max-md:px-8">
+			<div className="col-span-3 max-md:col-span-2 max-sm:col-span-1 w-2/3 max-sm:w-full flex flex-col items-center justify-center justify-self-center">
+				<TypographyH2 className="border-none font-extrabold text-center">
 					Why Next Starter?
 				</TypographyH2>
 				<TypographyP className="text-center">
