@@ -1,8 +1,5 @@
-"use client"
-
 import { TypographyH3 } from "@/components/ui/typography";
 import {
-	ClerkLoading,
 	SignedIn,
 	SignedOut,
 	SignInButton,
@@ -10,7 +7,6 @@ import {
 	UserButton,
 } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/theme-toggle";
 import { MenuIcon, X } from "lucide-react";
 import {
 	DropdownMenu,
@@ -18,6 +14,7 @@ import {
 	DropdownMenuTrigger,
 	DropdownMenuItem,
 } from "./ui/dropdown-menu";
+import { Avatar, AvatarFallback } from "./ui/avatar";
 
 export default function Navbar() {
 	return (
@@ -51,10 +48,6 @@ export default function Navbar() {
 					</SignUpButton>
 				</SignedOut>
 
-				<ClerkLoading>
-					<h2>Hello world</h2>
-				</ClerkLoading>
-
 				<div className="max-md:block hidden">
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
@@ -69,12 +62,20 @@ export default function Navbar() {
 							</Button>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent align="end">
-							<DropdownMenuItem><a href="/pricing">Pricing</a></DropdownMenuItem>
-							<DropdownMenuItem><a href="/blogs/getting-started-with-upbuddy">Guide</a></DropdownMenuItem>
-							<DropdownMenuItem><a href="/support">Support</a></DropdownMenuItem>
+							<DropdownMenuItem>
+								<a href="/pricing">Pricing</a>
+							</DropdownMenuItem>
+							<DropdownMenuItem>
+								<a href="/blogs/getting-started-with-upbuddy">
+									Guide
+								</a>
+							</DropdownMenuItem>
+							<DropdownMenuItem>
+								<a href="/support">Support</a>
+							</DropdownMenuItem>
 						</DropdownMenuContent>
 					</DropdownMenu>
-				VVC</div>
+				</div>
 
 				{/* <ModeToggle /> */}
 			</div>

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Button, ButtonProps } from "../ui/button";
 import LoadingDots from "../ui/loading-dots";
-import {  useUser } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { PricingTiers } from "./pricing-card";
 
