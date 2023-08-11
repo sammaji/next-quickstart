@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## 1.3.0
+
 -   Added support for unauthenticated routes
 
 ## 1.2.0
