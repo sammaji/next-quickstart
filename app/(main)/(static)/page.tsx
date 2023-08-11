@@ -16,8 +16,8 @@ export default function Home() {
 					Launch in Seconds
 				</TypographyH1>
 				<TypographyP className="text-2xl w-2/3 text-center">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Unde aut quas provident vero illum.
+					A simple customizable starter kit to quickly bootstrap a
+					Next.js project.
 				</TypographyP>
 				<div className="space-x-4">
 					<Button size="lg">Get Started</Button>

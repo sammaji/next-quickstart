@@ -4,8 +4,8 @@ import { authMiddleware } from "@clerk/nextjs";
 // Please edit this to allow other routes to be public as needed.
 // See https://clerk.com/docs/nextjs/middleware for more information about configuring your middleware
 export default authMiddleware({
-	publicRoutes: ["/", "/(github|twitter|linkedin)"],
-	ignoredRoutes: ["/(api|trpc)(.*)"],
+	publicRoutes: ["/(github|twitter|linkedin)"],
+	ignoredRoutes: ["/", "/(api|trpc)(.*)"],
 	clockSkewInMs: 100_000,
 	clockSkewInSeconds: 100,
 });
