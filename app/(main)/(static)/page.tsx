@@ -10,7 +10,7 @@ import FaqSection from "@/components/faq-section";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-	const router = useRouter()
+	const router = useRouter();
 	return (
 		<>
 			<main className="flex flex-col min-h-[calc(100vh-56px)] gap-8 p-24 max-sm:px-8 max-sm:py-16 items-center justify-center">
@@ -22,8 +22,18 @@ export default function Home() {
 					Next.js project.
 				</TypographyP>
 				<div className="space-x-4 max-sm:space-y-4 max-sm:space-x-0">
-					<Button size="lg" className="max-sm:w-[100%]" onClick={() => router.push("/dashboard")}>Get Started</Button>
-					<Button size="lg" variant="outline" className="max-sm:w-[100%]">
+					<Button
+						size="lg"
+						className="max-sm:w-[100%]"
+						onClick={() => router.push("/dashboard")}
+					>
+						Get Started
+					</Button>
+					<Button
+						size="lg"
+						variant="outline"
+						className="max-sm:w-[100%]"
+					>
 						Read Docs
 					</Button>
 				</div>
