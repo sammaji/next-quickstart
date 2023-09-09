@@ -26,7 +26,7 @@ export function TypographyH1(props: TypographyProps) {
 	return (
 		<h1
 			className={cn(
-				"scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+				"scroll-m-0 font-extrabold text-center tracking-tight text-5xl max-sm:text-3xl max-md:text-4x",
 				className,
 			)}
 			{...rest}

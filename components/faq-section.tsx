@@ -34,7 +34,7 @@ const faqs: Faqs[] = [
 
 export default function FaqSection() {
 	return (
-		<section className="pt-16 pb-24 px-24 grid grid-cols-2 gap-8">
+		<section className="pt-16 pb-24 px-24 max-sm:px-8 grid grid-cols-2 gap-8">
 			<div className="flex items-center justify-center max-md:hidden">
 				<img src={ImgFaq.src} className="w-full h-auto" />
 			</div>
