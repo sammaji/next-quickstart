@@ -1,5 +1,11 @@
 # next-starter
 
+## 1.4.1
+
+### Patch Changes
+
+-   update stripe api version
+
 ## 1.4.0
 
 ### Minor Changes
