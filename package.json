@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.26.2",
-    "@clerk/nextjs": "^4.23.2",
+    "@clerk/nextjs": "^4.23.5",
     "@prisma/client": "^5.2.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-avatar": "^1.0.3",
