@@ -1,4 +1,4 @@
-# #! /usr/bin/env sh
+#! /usr/bin/env sh
 
 function prompt_install_depp() {
     while true; do
@@ -34,7 +34,3 @@ rm tempfile
 
 prompt_install_depp
 rm -rf ./scripts
-
-git init -q
-git add .
-git commit -m "initial commit" -q
