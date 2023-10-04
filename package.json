@@ -48,6 +48,6 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "husky": "^8.0.0",
-    "prisma": "^5.2.0"
+    "prisma": "^5.3.1"
   }
 }
