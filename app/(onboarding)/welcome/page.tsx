@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { TypographyH1, TypographyP } from "@/components/ui/typography";
 import { useUser } from "@clerk/nextjs";
-import { ArrowLeft } from "lucide-react";
+import { FaArrowLeft } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -27,7 +27,7 @@ export default function PageWelcome() {
 					router.push("/");
 				}}
 			>
-				{<ArrowLeft size={16} />}&ensp;Continue
+				{<FaArrowLeft size={16} />}&ensp;Continue
 			</Button>
 		</div>
 	);
