@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { FaCheck } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import {
 	Card,
@@ -54,7 +54,7 @@ export default function PricingCard({
 							key={index}
 							className="mb-4 grid grid-cols-[25px_1fr] items-start pb-4 last:mb-0 last:pb-0"
 						>
-							<Check className="mr-2 h-4 w-4" />
+							<FaCheck className="mr-2 h-4 w-4" />
 							<div className="space-y-1">
 								<p className="text-sm font-medium leading-none">
 									{perk}
