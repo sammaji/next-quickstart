@@ -31,7 +31,7 @@ export default function CheckoutButton({ children, ...rest }: ButtonProps) {
 			throw new Error("client: no checkout_url found, please try again");
 
 		setLoadingState(false);
-		window.location = checkout_url;
+		window.open(checkout_url);
 	};
 
 	return (

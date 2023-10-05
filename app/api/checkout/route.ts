@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server";
 import { Stripe } from "stripe";
 
-export async function GET() {
-	return NextResponse.json({ message: "success" }, { status: 200 });
-}
 export async function POST(request: Request) {
 	const stripe = new Stripe(process.env.STRIPE_API_SECRET as string, {
 		apiVersion: "2023-08-16",
@@ -22,8 +19,8 @@ export async function POST(request: Request) {
 	let event;
 	try {
 		event = await stripe.checkout.sessions.create({
-			success_url: process.env.STRIPE_SUCCESS_URL as string,
-			cancel_url: process.env.STRIPE_CANCEL_URL as string,
+			success_url: process.env.NEXT_PUBLIC_STRIPE_SUCCESS_URL as string,
+			cancel_url: process.env.NEXT_PUBLIC_STRIPE_CANCEL_URL as string,
 			mode: "subscription",
 			line_items: [
 				{
