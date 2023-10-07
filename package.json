@@ -13,6 +13,8 @@
     "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "stripe:listen": "stripe listen --events checkout.session.completed --forward-to localhost:3000/api/webhook/checkout",
+    "stripe:trigger": "stripe trigger checkout.session.completed",
     "prepare": "husky install"
   },
   "dependencies": {
