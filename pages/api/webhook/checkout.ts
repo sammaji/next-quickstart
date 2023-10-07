@@ -53,19 +53,19 @@ export default async function handler(
 			);
 	}
 
-  let session;
+	let session;
 	switch (event.type) {
 		case "checkout.session.completed":
-      session = event.data.object as Stripe.Checkout.Session;
-      break;
+			session = event.data.object as Stripe.Checkout.Session;
+			break;
 
-    case "checkout.session.async_payment_succeeded":
-      session = event.data.object as Stripe.Checkout.Session;
-      break;
-    
-    case "checkout.session.async_payment_failed":
-      session = event.data.object as Stripe.Checkout.Session;
-      break;
+		case "checkout.session.async_payment_succeeded":
+			session = event.data.object as Stripe.Checkout.Session;
+			break;
+
+		case "checkout.session.async_payment_failed":
+			session = event.data.object as Stripe.Checkout.Session;
+			break;
 	}
 
 	res.status(200).end();

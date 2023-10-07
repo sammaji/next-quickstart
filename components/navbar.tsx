@@ -20,7 +20,7 @@ export default function Navbar({
 	return (
 		<nav className="w-full h-[56px] px-8 flex items-center justify-between border-b-[1px]">
 			<TypographyH3 className="mt-0 font-extrabold text-md">
-				{"Next Starter"}
+				{"Next Quickstart"}
 			</TypographyH3>
 			<div className="flex items-center justify-center gap-2">
 				{children}

@@ -103,7 +103,7 @@ export default function FooterSection() {
 						Subscribe to our newsletter
 					</TypographyH3>
 					<TypographyP className="text-md">
-						Subscribe to the Next Starter newsletter and stay
+						Subscribe to the Next Quickstart newsletter and stay
 						updated on new releases and features, guides, and case
 						studies.
 					</TypographyP>
@@ -115,7 +115,7 @@ export default function FooterSection() {
 			</div>
 			<div className="px-8 pb-8">
 				<TypographyH3 className="font-extrabold">
-					Next Starter
+					Next Quickstart
 				</TypographyH3>
 				<TypographyP className="text-xs text-gray-500">
 					© 2023 Sam Maji, Inc. All rights reserved.

@@ -15,20 +15,21 @@ type Faqs = {
 
 const faqs: Faqs[] = [
 	{
-		question: "What is Next Starter?",
-		answer: "Next Starter is a powerful cloud-based platform that simplifies project management and enhances team collaboration, empowering businesses to achieve their goals efficiently.",
+		question: "What is Next Quickstart?",
+		answer: "Next Quickstart is a powerful cloud-based platform that simplifies project management and enhances team collaboration, empowering businesses to achieve their goals efficiently.",
 	},
 	{
-		question: "Can I try Next Starter before committing to a subscription?",
-		answer: "Absolutely! We offer a 14-day free trial with full access to all features. No credit card is required during the trial period, so you can explore Next Starter risk-free.",
+		question:
+			"Can I try Next Quickstart before committing to a subscription?",
+		answer: "Absolutely! We offer a 14-day free trial with full access to all features. No credit card is required during the trial period, so you can explore Next Quickstart risk-free.",
 	},
 	{
-		question: "How secure is my data with Next Starter?",
+		question: "How secure is my data with Next Quickstart?",
 		answer: "We take data security seriously. Your data is protected with bank-level encryption and stored on secure servers. We follow industry best practices to ensure your information remains safe and confidential.",
 	},
 	{
-		question: "Does Next Starter integrate with other tools we use?",
-		answer: "Yes! Next Starter seamlessly integrates with popular apps and services like Slack, Microsoft 365, Google Workspace, and more. Enhance your existing workflow by connecting your favorite tools.",
+		question: "Does Next Quickstart integrate with other tools we use?",
+		answer: "Yes! Next Quickstart seamlessly integrates with popular apps and services like Slack, Microsoft 365, Google Workspace, and more. Enhance your existing workflow by connecting your favorite tools.",
 	},
 ];
 
@@ -36,7 +37,10 @@ export default function FaqSection() {
 	return (
 		<section className="pt-16 pb-24 px-24 max-sm:px-8 grid grid-cols-2 gap-8">
 			<div className="flex items-center justify-center max-md:hidden">
-				<img src={ImgFaq.src} className="w-full h-auto" />
+				<img
+					src={ImgFaq.src}
+					className="w-full pr-16 max-lg:pr-0 h-auto"
+				/>
 			</div>
 			<div className="max-md:col-span-2">
 				<TypographyH2 className="border-none font-extrabold">

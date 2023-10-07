@@ -1,8 +1,9 @@
 {
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/prettierrc.json",
   "tabWidth": 4,
   "useTabs": true,
   "bracketSameLine": false,
-  "endOfLine": "crlf",
+  "endOfLine": "lf",
   "bracketSpacing": true,
   "arrowParens": "avoid",
   "semi": true,

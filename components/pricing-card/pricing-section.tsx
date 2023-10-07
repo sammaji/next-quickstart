@@ -44,7 +44,7 @@ export default function PricingSection() {
 		<section className="grid grid-rows-[auto_1fr] grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-8 pt-8 pb-16 px-24 max-sm:px-8">
 			<div className="col-span-3 max-md:col-span-2 max-sm:col-span-1 w-2/3 max-sm:w-full flex flex-col items-center justify-center justify-self-center">
 				<TypographyH2 className="border-none font-extrabold">
-					Why Next Starter?
+					Why Choose Us?
 				</TypographyH2>
 				<TypographyP className="text-center">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
