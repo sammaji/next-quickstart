@@ -9,23 +9,8 @@ datasource db {
 
 model User {
   id           String        @id @default(cuid())
-  username     String        @unique
+  fname        String
+  lname        String
+  username     String?        @unique
   email        String
-  profile      Profile?
-  subscription Subscription?
-}
-
-// if you want to create a public profile for users
-model Profile {
-  id   String @id @default(cuid())
-  uid  String @unique
-  user User   @relation(fields: [uid], references: [id])
-}
-
-model Subscription {
-  id      String   @id @default(cuid())
-  uid     String   @unique
-  user    User     @relation(fields: [uid], references: [id])
-  created DateTime @default(now())
-  expires DateTime
 }

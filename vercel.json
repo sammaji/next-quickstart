@@ -1,22 +1,7 @@
 {
     "framework": "nextjs",
-    "buildCommand": "next build",
-    "installCommand": "npm ci",
+    "buildCommand": "prisma generate && next build",
+    "installCommand": "pnpm install",
     "devCommand": "next dev",
-    "cleanUrls": true,
-    "redirects": [],
-    "rewrites": [
-        {
-            "source": "/github",
-            "destination": "https://github.com/samyabrata-maji"
-        },
-        {
-            "source": "/twitter",
-            "destination": "https://twitter.com/sammaji15"
-        },
-        {
-            "source": "/linkedin",
-            "destination": "https://linkedin.com/in/samyabrata-maji"
-        }
-    ]
+    "cleanUrls": true
 }

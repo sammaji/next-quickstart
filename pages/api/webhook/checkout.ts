@@ -54,6 +54,7 @@ export default async function handler(
 	}
 
 	let session;
+	let subscription;
 	switch (event.type) {
 		case "checkout.session.completed":
 			session = event.data.object as Stripe.Checkout.Session;
@@ -61,10 +62,22 @@ export default async function handler(
 
 		case "checkout.session.async_payment_succeeded":
 			session = event.data.object as Stripe.Checkout.Session;
+			stripe.subscriptions.create({
+				customer: session.customer?.toString() as string,
+			})
 			break;
 
 		case "checkout.session.async_payment_failed":
 			session = event.data.object as Stripe.Checkout.Session;
+			break;
+
+		case "customer.subscription.created":
+			break;
+		
+		case "customer.subscription.updated":
+			break;
+
+		case "customer.subscription.deleted":
 			break;
 	}
 

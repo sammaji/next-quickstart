@@ -47,13 +47,21 @@ export async function POST(req: Request) {
 	const evt = payload as WebhookEvent;
 
 	const eventType = evt.type;
+
+	let primaryEmail;
+	if (eventType == "user.created" || eventType == "user.updated") {
+		primaryEmail = evt.data.email_addresses.find(value => value.id === evt.data.primary_email_address_id)?.email_address
+	}
+
 	switch (eventType) {
 		case "user.created":
 			await prisma.user.create({
 				data: {
-					uid: evt.data.id,
-					email: evt.data.email_addresses[0].email_address,
-					username: evt.data.username as string,
+					id: evt.data.id,
+					email: primaryEmail as string,
+					fname: evt.data.first_name,
+					lname: evt.data.last_name,
+					username: evt.data.username
 				},
 			});
 			break;
@@ -61,11 +69,13 @@ export async function POST(req: Request) {
 		case "user.updated":
 			await prisma.user.update({
 				where: {
-					uid: evt.data.id,
+					id: evt.data.id,
 				},
 				data: {
-					email: evt.data.email_addresses[0].email_address,
-					username: evt.data.username as string,
+					email: primaryEmail,
+					username: evt.data.username,
+					fname: evt.data.first_name,
+					lname: evt.data.last_name
 				},
 			});
 			break;
@@ -73,7 +83,7 @@ export async function POST(req: Request) {
 		case "user.deleted":
 			await prisma.user.delete({
 				where: {
-					uid: evt.data.id,
+					id: evt.data.id,
 				},
 			});
 			break;
