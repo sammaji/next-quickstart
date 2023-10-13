@@ -24,7 +24,7 @@ First, you'll need to clone this repository to your local system. Open your
 terminal and run the following command:
 
 ```bash
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/samyabrata-maji/next-quickstart
 ```
 
 Replace your-username with your GitHub username and your-project with the name
