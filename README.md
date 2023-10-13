@@ -7,7 +7,7 @@
 -   [x] Next 13 App Directories
 -   [x] Prettier and ESLint
 -   [x] Tailwindcss
--   [x] Commonly used UI Components (eg, buttons, accordions, dialog etc)
+-   [x] Commonly used UI Components (eg, buttons, accordions, dialog, etc)
 -   [x] User Authentication Using Clerk
 -   [ ] Stripe checkout
 -   [ ] Contentlayer
@@ -24,18 +24,15 @@ First, you'll need to clone this repository to your local system. Open your
 terminal and run the following command:
 
 ```bash
-git clone https://github.com/your-username/your-project.git
+git clone https://github.com/samyabrata-maji/next-quickstart
 ```
-
-Replace your-username with your GitHub username and your-project with the name
-of the repository.
 
 ## 2. Install Dependencies
 
 Navigate to the project's directory using the cd command:
 
 ```bash
-cd your-project
+cd next-quickstart
 ```
 
 Once you're inside the project directory, you need to install any dependencies
@@ -49,7 +46,7 @@ npm install
 ## 3. Configuration
 
 Depending on the project, you may need to configure it before running it. Look
-for a configuration file (e.g., config.js, config.json, .env, etc.) in the
+for a configuration file (eg. config.js, config.json, .env, etc.) in the
 project directory or follow the configuration instructions provided in the
 project's documentation.
 
@@ -60,7 +57,11 @@ run the project. The exact command to start the project may vary depending on
 the project's technology stack. Refer to the project's documentation or README
 for specific instructions.
 
-For example, if it's a Node.js application, you might start it with: npm start
+For example, if it's a Node.js application, you might start it with: 
+
+```bash
+npm start
+```
 
 Make sure to check the project's README or documentation for any additional
 setup or configuration required to run the project successfully.
@@ -72,7 +73,7 @@ application to access the project. By default, it may be available at
 http://localhost:PORT, where PORT is the port number specified in the project's
 configuration.
 
-You should now have the project up and running on your local machine.
+You should now have the project setup and running on your local machine.
 
 ## Troubleshooting
 
