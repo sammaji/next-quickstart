@@ -1,7 +1,15 @@
 {
+    "$schema": "https://openapi.vercel.sh/vercel.json",
     "framework": "nextjs",
     "buildCommand": "prisma generate && next build",
     "installCommand": "pnpm install",
     "devCommand": "next dev",
-    "cleanUrls": true
+    "cleanUrls": true,
+    "redirects": [
+        {
+            "source": "/github",
+            "destination": "https://github.com/samyabrata-maji",
+            "permanent": true
+        }
+    ]
 }
