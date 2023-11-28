@@ -5,11 +5,10 @@
     "installCommand": "pnpm install",
     "devCommand": "next dev",
     "cleanUrls": true,
-    "redirects": [
+    "rewrites": [
         {
             "source": "/github",
-            "destination": "https://github.com/samyabrata-maji",
-            "permanent": true
+            "destination": "https://github.com/samyabrata-maji"
         }
     ]
 }
