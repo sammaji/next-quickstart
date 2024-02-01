@@ -52,7 +52,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.4.6",
+    "@storybook/addon-essentials": "^7.6.12",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.4.6",
     "@storybook/addon-onboarding": "^1.0.8",
